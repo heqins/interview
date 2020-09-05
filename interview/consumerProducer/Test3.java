@@ -11,14 +11,14 @@ public class Test3 {
 
     public static void main(String[] args) {
         Test3 test3 = new Test3();
-//        new Thread(test3.new Producer()).start();
+        new Thread(test3.new Producer()).start();
         new Thread(test3.new Consumer()).start();
 //        new Thread(test3.new Producer()).start();
-        new Thread(test3.new Consumer()).start();
+//        new Thread(test3.new Consumer()).start();
 //        new Thread(test3.new Producer()).start();
-        new Thread(test3.new Consumer()).start();
+//        new Thread(test3.new Consumer()).start();
 //        new Thread(test3.new Producer()).start();
-        new Thread(test3.new Consumer()).start();
+//        new Thread(test3.new Consumer()).start();
     }
 
     class Producer implements Runnable {

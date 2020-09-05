@@ -1,6 +1,9 @@
 package interview.consumerProducer;
 
 public class Test {
+    /**
+     * 这也是最简单最基础的实现，缓冲区满和为空时都调用wait()方法等待，当生产者生产了一个产品或者消费者消费了一个产品之后会唤醒所有线程。
+     */
     private static String LOCK = "lock";
     private static final Integer FULL = 10;
     private static Integer count = 0;

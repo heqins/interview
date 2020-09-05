@@ -1,6 +1,7 @@
 package interview.sort;
 
 import java.util.Arrays;
+import java.util.concurrent.CyclicBarrier;
 
 public class merge {
     public static void main(String[] args) {
@@ -9,9 +10,16 @@ public class merge {
         i.merge_sort(test, 0, test.length - 1);
         System.out.println(Arrays.toString(test));
     }
+    /**
+     * 递归在算法里边用得非常非常多，排序算法的快速排序和归并排序就需要用到递归（至少用递归来实现是最方便的）。
+     * 想要用递归必须知道两个条件：递归出口(终止递归的条件)和递归表达式(规律)
+     * @param arrays
+     */
 
     /**
      * 归并排序的思想是将数组分成两部分，分别进行排序，然后归并起来。
+     * 思路：将两个已排好序的数组合并成一个有序的数组。将元素分隔开来，看成是有序的数组，进行比较合并。不断拆分和合并，直到只有一个元素
+     * 代码实现：在第一趟排序时实质是两个元素(看成是两个已有序的数组)来进行合并，不断执行这样的操作，最终数组有序，拆分左边，右边，合并…
      * @param nums
      * @param left
      * @param right
@@ -54,11 +62,5 @@ public class merge {
             nums[newIndex2] = temp[newIndex2];
             newIndex2++;
         }
-    }
-
-    public void swap(int[] nums, int i, int j) {
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
     }
 }
