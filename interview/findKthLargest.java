@@ -53,7 +53,7 @@ public class findKthLargest {
 
         while (i < j) {
             while (i < j && nums[j] >= temp) j--;
-            if (i <= j) {
+            if (i < j) {
                 nums[i++] = nums[j];
             }
 
